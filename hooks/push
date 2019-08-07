@@ -7,7 +7,7 @@ if [ "${SOURCE_BRANCH}" != "master" ]; then
     exit 0
 fi
 
-for tag in $(sudo docker images jotum/postgres-healthcheck --format "{{.Tag}}");
+for tag in $(docker images jotum/postgres-healthcheck --format "{{.Tag}}");
 do
     docker push "jotum/postgres-healthcheck:${tag}"
 done

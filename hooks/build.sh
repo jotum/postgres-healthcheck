@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG="jotum/postgres-healthckeck${BASE_TAG:+:${BASE_TAG}}"
+TAG="jotum/postgres-healthcheck${BASE_TAG:+:${BASE_TAG}}"
 
 set -x
 docker build . \
